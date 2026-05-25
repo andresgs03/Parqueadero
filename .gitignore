@@ -1,0 +1,35 @@
+# Ejecutables y compilados C/C++
+*.exe
+*.obj
+*.o
+*.dll
+*.pyd
+*.so
+*.lib
+*.exp
+*.ilk
+*.pdb
+
+# Archivos generados por SWIG
+*_wrap.cxx
+*_wrap.cpp
+parqueadero.py
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Streamlit
+.streamlit/
+
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+
+# Sistema
+.DS_Store
+Thumbs.db
