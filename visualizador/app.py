@@ -40,9 +40,15 @@ if "servidor_iniciado" not in st.session_state:
     st.session_state.resultado_servidor = resultado
 
 
-if st.session_state.resultado_servidor:
+resultado_servidor = st.session_state.resultado_servidor
+
+if resultado_servidor == 1:
 
     st.success(f"Servidor socket iniciado en el puerto {PUERTO}.")
+
+elif resultado_servidor == 2:
+
+    st.info(f"Servidor socket ya estaba activo en el puerto {PUERTO}.")
 
 else:
 
@@ -54,11 +60,16 @@ eventos_recibidos = 0
 
 for i in range(10):
 
-    mensaje = parqueadero.recibirEvento()
+    resultado_evento = parqueadero.recibirEvento()
 
-    if mensaje != "":
+    if resultado_evento == 1:
 
         eventos_recibidos += 1
+
+    elif resultado_evento == -1:
+
+        st.warning("El servidor no está iniciado correctamente.")
+        break
 
 
 col1, col2, col3, col4 = st.columns(4)
