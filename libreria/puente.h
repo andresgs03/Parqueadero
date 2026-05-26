@@ -5,8 +5,8 @@
 
 using namespace std;
 
-bool iniciarServidor(int puerto);
-string recibirEvento();
+int iniciarServidor(int puerto);
+int recibirEvento();
 
 int getCapacidad();
 int getLibres();
