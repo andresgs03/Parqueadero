@@ -83,10 +83,7 @@ ProyectoParqueadero/
 │   └── run_visualizador.bat
 │
 ├── docs/
-│   ├── UML.puml
-│   ├── PLAN_TRABAJO.md
-│   └── SUSTENTACION.md
-│
+│   └── UML.jpg
 ├── README.md
 └── .gitignore
 ```
